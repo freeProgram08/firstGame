@@ -14,7 +14,7 @@
         <!--jdbc驱动地址-->
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
           <!--jdbc协议描述-->
-        <property name="url" value="jdbc:mysql://112.74.24.172:3306/test" />
+        <property name="url" value="jdbc:mysql://112.74.24.172:3306/firstGame" />
       <!--  数据库用户名-->
         <property name="username" value="root" />
         <!--数据库密码-->
@@ -43,12 +43,12 @@
    <!-- 创建mybatis关联接口对象-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <!--接口所有在文件夹地址  package方式-->
-        <property name="basePackage" value="com.mytest.dao" />
+        <property name="basePackage" value="com.wangteam.dao" />
         <!--配置mybatis工厂-->
      <!--   sqlSessionFactoryBeanName配置的是在spring中定义的id值名称
         不是一个对象 -->
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
 
-     <import resource="spring-mvc.xml"/>
+ <!--    <import resource="spring-mvc.xml"/>-->
 </beans>
