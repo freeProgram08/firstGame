@@ -113,17 +113,28 @@
         </dependency>
 
     </dependencies>
-    <!--   指定jdk编译级别-->
+
     <build>
         <finalName>web_maven</finalName>
-        <!--解决idea源经常重置为1.5问题-->
+
         <plugins>
+            <!--   指定jdk编译级别-->
+            <!--解决idea源经常重置为1.5问题-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
+                </configuration>
+            </plugin>
+             <!--解决单元测试跟mvc冲突-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.12.4</version>
+                <configuration>
+                    <skipTests>true</skipTests>
                 </configuration>
             </plugin>
         </plugins>

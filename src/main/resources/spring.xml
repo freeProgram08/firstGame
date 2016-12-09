@@ -50,5 +50,5 @@
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
 
- <!--    <import resource="spring-mvc.xml"/>-->
+     <import resource="spring-mvc.xml"/>
 </beans>
